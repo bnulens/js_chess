@@ -1,4 +1,4 @@
-import { pieceMovement } from "./pieceMovements";
+import { definePieceMovement } from "./pieceMovements";
 
 // document.addEventListener("DOMContentLoaded", (e) => {
 //   let occupiedTile = [];
@@ -23,7 +23,7 @@ const registerMoves = () => {
       playPiece.pieceColor =
         clicked.attributes.getNamedItem("piececolor").value;
       playPiece.fromTile = clicked.offsetParent.classList[1];
-      pieceMovement(playPiece);
+      definePieceMovement(playPiece);
     }
     if (clicked.className.includes("tile")) {
       console.log(clicked.classList[1]);
